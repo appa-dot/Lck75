@@ -5,6 +5,7 @@
 #define TAP_SPEED 40
 #define ANIM_SIZE 512
 #define ANIM_AMOUNT 2
+#define OLED_TIMEOUT 60000
 
 #ifdef OLED_ENABLE
 
