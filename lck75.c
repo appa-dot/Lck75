@@ -1,12 +1,22 @@
 #include "quantum.h"
 
+/** Fimware size chart
+* default without oled           : 10528/28672
+* default without oled code      : 12260/28672
+* default with oled (-3 frames)  : 21228/28672
+* default with oled              : 21228/28672
+* vial without oled              : 17800/28672
+* vial without oled code         : 19536/28672
+* vial with oled (-3 frames)     : 28462/28672
+*/
+
+#ifdef OLED_ENABLE
+
 // definitions
 #define WAIT_MULTIPLIER 5
 #define TAP_SPEED 40
 #define ANIM_SIZE 512
 #define ANIM_AMOUNT 2
-
-#ifdef OLED_ENABLE
 
 oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
     return OLED_ROTATION_180;
